@@ -1,0 +1,34 @@
+{
+  "name": "02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src --ext .ts --fix",
+    "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
+    "dev": "tsx watch ./src/server.ts",
+    "test": "vitest",
+    "build": "tsup ./src --out-dir ./build",
+    "prod": "node ./build/server.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@types/supertest": "^2.0.12",
+    "eslint": "^8.33.0",
+    "supertest": "^6.3.3",
+    "tsup": "^6.6.0",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.4"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^8.3.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.12.0",
+    "knex": "^2.4.2",
+    "sqlite3": "^5.1.4",
+    "zod": "^3.20.5"
+  }
+}
